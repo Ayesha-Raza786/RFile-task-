@@ -73,7 +73,7 @@ summary(model_random)
 
 # Hausman Test: Which model is better?
 phtest(model, model_random)
-
+# 
 colSums(is.na(pdata))
 str(pdata)
 
