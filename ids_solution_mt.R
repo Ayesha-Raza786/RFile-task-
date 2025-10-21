@@ -50,4 +50,27 @@ mean_salary
 sd_salary
 correlation
 
+#QUESTION 3
+library(ggplot2)
+ggplot(mtcars, aes(x = hp, y = mpg)) +
+  geom_point(color = "blue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red") +
+  labs(title = "Relationship between Horsepower and MPG",
+       x = "Horsepower (hp)",
+       y = "Miles per Gallon (mpg)")
+
+
+ggplot(mtcars, aes(x = factor(cyl), y = mpg, fill = factor(cyl))) +
+  geom_boxplot() +
+  labs(title = "MPG Distribution by Number of Cylinders",
+       x = "Number of Cylinders",
+       y = "Miles per Gallon (mpg)") +
+  theme_minimal()
+
+ggplot(mtcars, aes(x = wt)) +
+  geom_histogram(bins = 10, fill = "skyblue", color = "black") +
+  labs(title = "Distribution of Car Weights",
+       x = "Weight (1000 lbs)",
+       y = "Count of Cars") +
+  theme_light()
 
